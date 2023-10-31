@@ -38,7 +38,7 @@ const createGetMusicInfosTask = (hashs) => {
 }
 
 export const filterMusicInfoList = (rawList) => {
-  // console.log(rawList)
+  console.log(rawList)
   let ids = new Set()
   let list = []
   rawList.forEach(item => {
