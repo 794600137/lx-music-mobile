@@ -12,5 +12,5 @@ jobs:
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.PAT }}
-          repository: 794600137/lx-music-mobile
+          repository: https://github.com/794600137/lx-music-mobile
           event-type: npm-release
