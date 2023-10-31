@@ -13,10 +13,10 @@ export const decodeLyric = str => new Promise((resolve, reject) => {
   }
   const result = pako.inflate(buf_str, { to: 'string' })
   resolve(result)
-  // (err, result) => {
-  //   if (err) return reject(err)
-  //   resolve(result.toString())
-  // }
+   (err, result) => {
+    if (err) return reject(err)
+    resolve(result.toString())
+  }
 })
 
 // s.content[0].lyricContent.forEach(([str]) => {
@@ -53,7 +53,7 @@ export const createHttpFetch = async(url, options, retryNum = 0) => {
     console.log(err)
     return createHttpFetch(url, options, ++retryNum)
   }
-  // console.log(result.statusCode, result.body)
+   console.log(result.statusCode, result.body)
   if (result.statusCode !== 200 ||
     (
       result.body.error_code ??
